@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danke für das Weihnachtsessen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(180deg, #fffaf5, #f3ebe3);
+      color: #4a3f35;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+      text-align: center;
+    }
+
+    .title-image {
+      max-width: 520px;
+      width: 100%;
+      margin: 0 auto 2rem;
+      display: block;
+    }
+
+    .text {
+      font-size: 1.8rem;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      line-height: 1.6;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 18px;
+      padding: 8px;
+      background: #fff;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Querformat-Bilder */
+    .gallery img.landscape {
+      grid-column: span 2;
+      aspect-ratio: 16 / 9;
+    }
+
+    /* Mobile: Querformat wieder einspaltig */
+    @media (max-width: 600px) {
+      .gallery img.landscape {
+        grid-column: span 1;
+      }
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.18);
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 1.4rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="images/danke.png" alt="Danke" class="title-image" />
+
+    <p class="text">
+      für das super schöne Weihnachts-Essen mit euch allen.<br />
+      Wir haben den Tag mit euch zusammen von Herzen genossen.
+    </p>
+
+    <div class="gallery">
+      <img src="images/1.jpeg" />
+      <img src="images/2.jpeg" class="landscape" />
+      <img src="images/3.jpeg" />
+      <img src="images/4.jpeg" />
+<!--      <img src="images/5.jpeg" /> -->
+      <img src="images/6.jpeg" />
+      <img src="images/7.jpeg" class="landscape" />
+      <img src="images/8.jpeg" />
+    </div>
+<a href="downloads/images-download.zip" download>
+  📥 Alle Bilder herunterladen
+</a>
+    <footer>
+      Mit Liebe erstellt 🤍
+    </footer>
+  </div>
+</body>
+</html>
